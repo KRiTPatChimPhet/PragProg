@@ -34,8 +34,8 @@
 
               var ค่าอาหาร = Number(document.getElementById("ค่าอาหาร").value);
               var เปอร์เซ็นต์ค่าทิป = Number(document.getElementById("เปอร์เซ็นต์ค่าทิป").value);
-              var ค่าทิป = ค่าอาหาร * เปอร์เซ็นต์ค่าทิป / 100;
-              var result = ค่าอาหาร + ค่าทิป
+              var ค่าทิป = Math.round(ค่าอาหาร * เปอร์เซ็นต์ค่าทิป) / 100;
+              var result = Math.round(ค่าอาหาร + ค่าทิป)
 
               document.getElementById("ค่าทิป").value = ค่าทิป;
               document.getElementById("result").value = result;
