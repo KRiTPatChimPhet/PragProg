@@ -13,21 +13,20 @@
         <link rel="stylesheet" href="">
     </head>
     <body> 
+
         <label>ราคาอาหารรวมทั้งหมด :</label>
-        <input type="number" id="ค่าอาหาร"  onchange='calculate()'/>บาท
+        <input type="number" id="ค่าอาหาร" onchange='calculate()'/>บาท
         <br>
         <label>อัตราค่าทิป พนักงานบริการ ที่เหมาะสม :</label>
-        <input type="number" id="เปอร์เซ็นต์ค่าทิป"  onchange='calculate()'/>%
+        <input type="number" id="เปอร์เซ็นต์ค่าทิป" min="0" max="20" onchange='calculate()'/>%
         <br>
         <label>จำนวนค่าทิปพนักงานบริการ คิดเป็น :</label>
-        <input type="number" id="ค่าทิป" readonly/>บาท
+        <input type="number" id="ค่าทิปเต็ม" readonly/>บาท  
+        เป็น <input type="number" id="ค่าทิป" readonly/>บาท
         <br>
         <label>คิดรวมทั้งหมดเป็นเงิน :</label>
         <input type="number" id="result" readonly/>บาท
         
-
-        
-
 
         <script src="" async defer></script>
         <script>
@@ -37,16 +36,17 @@
 
               var ค่าอาหาร = Number(document.getElementById("ค่าอาหาร").value);
               var เปอร์เซ็นต์ค่าทิป = Number(document.getElementById("เปอร์เซ็นต์ค่าทิป").value);
-              var ค่าทิป = Math.round(ค่าอาหาร * เปอร์เซ็นต์ค่าทิป) / 100;
+              var ค่าทิปเต็ม = ค่าอาหาร * เปอร์เซ็นต์ค่าทิป / 100;
+              var ค่าทิป = Math.round((ค่าอาหาร * เปอร์เซ็นต์ค่าทิป) / 100);
               var result = ค่าอาหาร + ค่าทิป
               
+              document.getElementById("ค่าทิปเต็ม").value = ค่าทิปเต็ม ;
               document.getElementById("ค่าทิป").value = ค่าทิป;
               document.getElementById("result").value = result;
               
 
             }
-             
-          
+            
 
           </script>
     </body>
