@@ -14,21 +14,30 @@
     </head>
     <body> 
 
+      <form onsubmit="return calculate()">
+
         <label>ราคาอาหารรวมทั้งหมด :</label>
         <input type="number" id="ค่าอาหาร" onchange='calculate()'/>บาท
-        <br>
+        
+        <span id="messages1"  style="color: red "></span>
+        <br> <br>
+        
         <label>อัตราค่าทิป พนักงานบริการ ที่เหมาะสม :</label>
-        <input type="number" id="เปอร์เซ็นต์ค่าทิป" min="0" max="20" onchange='calculate()'/>%
-        <br>
+        <input type="number" id="เปอร์เซ็นต์ค่าทิป" min="0" max="20" onchange='calculate()'/>%        
+        <br> <br>
+
         <label>จำนวนค่าทิปพนักงานบริการ คิดเป็น :</label>
         <input type="number" id="ค่าทิปเต็ม" readonly/>บาท  
         เป็น <input type="number" id="ค่าทิป" readonly/>บาท
-        <br>
+        <br> <br>
+
         <label>คิดรวมทั้งหมดเป็นเงิน :</label>
         <input type="number" id="result" readonly/>บาท
-        
 
-        <script src="" async defer></script>
+        <input type="submit" value="Submit">
+      </form>
+
+
         <script>
             function calculate () {
 
@@ -43,7 +52,27 @@
               document.getElementById("ค่าทิปเต็ม").value = ค่าทิปเต็ม ;
               document.getElementById("ค่าทิป").value = ค่าทิป;
               document.getElementById("result").value = result;
-              
+              if(ค่าอาหาร<=0){
+                    document.getElementById("messages1").innerHTML="Please enter a new price.";
+                    return false;
+              }
+              if(เปอร์เซ็นต์ค่าทิป<=0){
+                    document.getElementById("messages1").innerHTML="Please enter a tip greater than or equal to 0.";
+                    return false;
+              }
+              if(เปอร์เซ็นต์ค่าทิป>=20){
+                    document.getElementById("messages1").innerHTML="Please enter a tip less than 20.";
+                    return false;
+              }
+              if(เปอร์เซ็นต์ค่าทิป<=20){
+                    document.getElementById("messages1").innerHTML="";
+                    return true;
+              }
+              if(ค่าอาหาร>=0){
+                    document.getElementById("messages1").innerHTML="";
+                    return true;
+              }
+              return true;
 
             }
             
