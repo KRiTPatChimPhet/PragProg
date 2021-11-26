@@ -7,5 +7,5 @@ console.log("Enter a noun :",Noun,"\n",
             "Enter a adjective :",Adjective,"\n",
             "Enter a adverb :",Adverb,"\n",
             "Do you",Verb,"your",Adjective,"",Noun,"",Adverb,"?",
-            "นี่เหละที่มันฮา!"
+            "นี่เหละที่มันฮา! "
             )
