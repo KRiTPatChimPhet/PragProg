@@ -1,8 +1,10 @@
-var Length = parseInt(prompt("What is the lenght of the room in feet?"))
-var Width = parseInt(prompt("What is the width of the room in feet?"))
-var Sqf = Length * Width ;
-var Sqm = (Sqf * 0.09290304).toFixed(3);
-console.log("What is the lenght of the room in feet?",Length,"\n",
-            "What is the Widht of the room in feet?",Width,"\n",
-            "You entered dimensions of",Length,"feet by",Width,"feet.","\n",
-            "The area is",Sqf,"square feet",Sqm,"square meters")
+var People = parseInt(prompt("How many people?"))
+var ManyPizzas = parseInt(prompt("How many pizzas do you have?"))
+var Pieces = ManyPizzas * 8
+var PiecesPerson = Math.floor(Pieces / People);
+var Leftover = Math.ceil(Pieces-(PiecesPerson * People));
+console.log("How many people?",People,"\n",
+            "How many pizzas do you have?",ManyPizzas,"\n",
+            "",People,"people with",ManyPizzas,"pizzas","\n",
+            "Each person gets",PiecesPerson,"pieces of pizza.","\n",
+            "There are",Leftover,"leftover pieces.",)
