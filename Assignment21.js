@@ -3,7 +3,6 @@ let theState = prompt("What is the state?");
 let subTotal;
 let tax;
 let total;
-let total1;
 if (theState === 'WI'){
      subTotal = "The subtotal is $ %d ."+orderAmount+".";
      tax = "The tax is $0.55."
