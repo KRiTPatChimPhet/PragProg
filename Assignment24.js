@@ -14,7 +14,7 @@ if (gender == "male"){
         console.log("Youer BAC is",bac,"\n it is legal for you to drive.")
     }
 }
-if (gender == "female"){
+else (gender == "female")
     r = 0.66
     bac = ((a * 5.14 / w * r ) - 0.15 * h).toFixed(2); 
     if (bac >= 0.08){
@@ -23,4 +23,3 @@ if (gender == "female"){
     else{
         console.log("Youer BAC is",bac,"\n it is legal for you to drive.")
     }
-}
