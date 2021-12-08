@@ -40,4 +40,4 @@ switch(number){
      default:
           month = "Please enter a new number.";
 }
-console.log(month);
+console.log("The name of the month is:",month);
