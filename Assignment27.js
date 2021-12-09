@@ -2,38 +2,32 @@ let order = Number(prompt("What is the order amount?"));
 let state;
 let taxState;
 let county;
-let taxEau;
-let taxE;
-let totalE;
-let taxDunn;
-let taxD;
-let totalD;
-let taxIllinois;
-let totalIllinois;
+let tax;
 let total;
+let totalTax;
 if(order){
      state = prompt("What state do you live in?");
      if (state == "Wisconsin" ){
           taxState = order*(5.5 / 100);
           county = prompt("What county do you live in?");
           if (county == "Eau"){
-               taxEau = order*(0.5 / 100);
-               taxE = (taxState + taxEau);
-               totalE = order+taxE;
-               console.log("The tax is:",(taxE).toFixed(2),"\n The total is:",totalE);
+               tax = order*(0.5 / 100);
+               totalTax = (taxState + tax);
+               total = order+totalTax;
+               console.log("The tax is:",(totalTax).toFixed(2),"\n The total is:",total);
           }
           else {if (county == "Dunn");{
-               taxDunn = order*(0.4 / 100);
-               taxD = (taxState+taxDunn);
-               totalD = order+taxD;
-               console.log("The tax is:",(taxD).toFixed(2),"\n The total is:",totalD);
+               tax = order*(0.4 / 100);
+               totalTax = (taxState+tax);
+               total = order+totalTax;
+               console.log("The tax is:",(totalTax).toFixed(2),"\n The total is:",total);
           }
      }
      }
      if (state == "Illinois"){
-               taxIllinois = order*(0.8 / 100);
-               totalIllinois = taxIllinois + order;
-               console.log("The tax is:",(taxIllinois).toFixed(2),"\n The total is:",totalIllinois);
+               tax = order*(8 / 100);
+               total = tax + order;
+               console.log("The tax is:",(tax).toFixed(2),"\n The total is:",total);
      }
      else {if (state == "Los Angelis"){
                total = order;

@@ -1,5 +1,6 @@
 let number = Number(prompt("Please enter the number of the month"));
 let month;
+let f;
 switch(number){
      case 1:
           month = "มกราคม";
@@ -38,6 +39,8 @@ switch(number){
           month = "ธันวาคม";
      break;
      default:
-          month = "Please enter a new number.";
+          window.alert("Please enter the number of new orders.");
+          location.reload();
+     break;
 }
 console.log("The name of the month is:",month);
