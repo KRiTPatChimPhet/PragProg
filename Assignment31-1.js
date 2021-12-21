@@ -1,15 +1,16 @@
+function isAnagram(a, b) {
+    stra = a.toLowerCase().split("").sort().join("")
+    strb = b.toLowerCase().split("").sort().join("")
+    stra.length;
+    strb.length;
+    return Boolean(stra === strb); 
+}
 let a = prompt("Enter the first string:");
 let b = prompt("Enter the second string:");
-function isAnagram(a, b) {
-     stra = a.toLowerCase().split("").sort().join("");
-     strb = b.toLowerCase().split("").sort().join("");
-     if (stra === strb) {
-          console.log("true")
-          console.log("\"" + a + "\" and \"" + b + "\" are anagrams");
-     }
-     else
-          console.log("false")
-          console.log("\"" + a + "\" and \"" + b + "\" are not anagrams"); 
-     
+let s = isAnagram(a, b)
+if(s == true){
+    console.log("\"" + a + "\" and \"" + b + "\" are anagrams");
 }
-isAnagram(a, b)    
+else
+    console.log("\"" + a + "\" and \"" + b + "\" are not anagrams");
+isAnagram(a, b)     
