@@ -1,12 +1,15 @@
 let a = prompt("Enter the first string:");
 let b = prompt("Enter the second string:");
-function isAnagram(a,b){
+function isAnagram(a, b) {
      stra = a.toLowerCase().split("").sort().join("");
      strb = b.toLowerCase().split("").sort().join("");
-     if (stra === strb){
+     if (stra === strb) {
           console.log("true")
+          console.log("\"" + a + "\" and \"" + b + "\" are anagrams");
      }
      else
-          console.log("false")  
+          console.log("false")
+          console.log("\"" + a + "\" and \"" + b + "\" are not anagrams"); 
+     
 }
-isAnagram(a,b)    
+isAnagram(a, b)    
