@@ -1,4 +1,4 @@
-function Num1() {
+function NumToText() {
     let inputNum = Number(prompt());
     let num = ["ศูนย์", "หนึ่ง", "สอง", "สาม", "สี่", "ห้า", "หก", "เจ็ด", "แปด", "เก้า", "สิบ"];
     let pos = ["หน่วย", "สิบ", "ร้อย", "พัน", "หมื่น", "แสน", "ล้าน", "สิบล้าน","ร้อยล้าน","พันล้าน","ล้านล้าน"];
@@ -21,4 +21,4 @@ function Num1() {
     console.log(res);
 }
 }
-Num1(), Num1(), Num1();
+NumToText(), NumToText(), NumToText();
