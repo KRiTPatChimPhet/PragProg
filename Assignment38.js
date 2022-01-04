@@ -2,10 +2,10 @@ let intensity = 0;
 let a = 55;
 do {
     restingHR = Number(prompt("Resting Pulse :"));
-} while (restingHR == NaN || restingHR == 0);
+} while (isNaN(restingHR) || restingHR == 0);
 do {
     age = Number(prompt("Age :"));
-} while (age == NaN || age == 0);
+} while (isNaN(age) || age == 0);
 console.log("Resting Pulse: " + restingHR + " Age: " + age + "\n"
     + "Intensity | Rate\n "+"---------|------")
 do {
