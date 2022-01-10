@@ -25,11 +25,11 @@ aNumber.sort(function(a, b){
 });
 console.log("The minimum is",aNumber[0],"\nThe maximum is",aNumber[aNumber.length-1]);
 
-let resule = 0;
+let result = 0;
 for (let i = 0; i < aNumber.length; i++){
   j = (aNumber[i] - average)**2;
-  resule += j;
+  result += j;
 }
 let g = (aNumber.length)-1;
-let averagesum = Math.sqrt(resule / g).toFixed(2);
-console.log("The standard deviation is ",averagesum);
+let sd = Math.sqrt(result / g).toFixed(2);
+console.log("The standard deviation is ",sd);
