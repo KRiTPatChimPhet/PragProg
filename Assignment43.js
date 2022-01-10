@@ -8,13 +8,11 @@ do {
             aNumber.push(inputNumber);
     }
 } while (inputNumber != "done" || inputNumber == "");
-
-let aNumbers = aNumber.toString();
-console.log("Numbers: " + aNumbers);
+console.log("Numbers: " + aNumber);
 
 let sum = aNumber.reduce(myFunc);
 function myFunc(total, num) {
-  return total - num * -1;
+  return total - num * -1 ;
 }
 
 let average = sum / aNumber.length;
