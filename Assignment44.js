@@ -37,8 +37,9 @@ for (let i = 0; i < numbers; i++) {
     aPassword.push(text);
 }
 
+let c = Math.floor(Math.random() * 5);
 let charac = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-let ch = minimum - (special + numbers);
+let ch = (minimum + c) - (special + numbers);
 for (let i = 0; i < ch; i++) {
     text = charac[Math.floor(Math.random() * charac.length)];
     aPassword.push(text);
@@ -54,7 +55,7 @@ while (pass.length < aPassword.length) {
     }
 }
 
-for (let i = 0; i < minimum; i++) {
+for (let i = 0; i < (minimum +c); i++) {
     randompass += (aPassword[pass[i]])
 }
 console.log("Your password is " + randompass);
