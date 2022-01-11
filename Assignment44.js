@@ -45,17 +45,17 @@ for (let i = 0; i < ch; i++) {
     aPassword.push(text);
 }
 
-let pass = Array()
-let randompass = ""
-let p = 0
+let pass = Array();
+let randompass = "";
+let p = 0;
 while (pass.length < aPassword.length) {
-    p = Math.floor(Math.random() * aPassword.length)
+    p = Math.floor(Math.random() * aPassword.length);
     if (pass.indexOf(p) < 0) {
-        pass.push(p)
+        pass.push(p);
     }
 }
 
 for (let i = 0; i < (minimum +c); i++) {
-    randompass += (aPassword[pass[i]])
+    randompass += (aPassword[pass[i]]);
 }
 console.log("Your password is " + randompass);
