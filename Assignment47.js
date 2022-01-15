@@ -37,8 +37,8 @@ function getPst(item) {
     return [item[2]].join(" ");
 }
 
-function getSeparation(persons) {
-    return [persons[3]].join(" ");
+function getSeparation(item) {
+    return [item[3]].join(" ");
 }
 
 function tile(localSortName, localSortPst) {
