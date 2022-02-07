@@ -42,5 +42,5 @@ switch(number){
           window.alert("Please enter the number of new orders.");
           location.reload();
      break;
-}
+} 
 console.log("The name of the month is:",month);
